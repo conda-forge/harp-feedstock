@@ -13,7 +13,7 @@ source:
     - rmodule.patch
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SDKROOT  # [osx]
   rpaths:
