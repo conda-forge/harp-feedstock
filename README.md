@@ -153,6 +153,20 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>win_64_python3.7.____73_pypyr_base4.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13569&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/harp-feedstock?branchName=master&jobName=win&configuration=win_64_python3.7.____73_pypyr_base4.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.7.____73_pypyr_base4.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13569&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/harp-feedstock?branchName=master&jobName=win&configuration=win_64_python3.7.____73_pypyr_base4.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64_python3.7.____cpythonr_base4.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13569&branchName=master">
