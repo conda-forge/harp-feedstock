@@ -30,6 +30,7 @@ requirements:
     - flex  # [not win]
     - m2-bison  # [win]
     - m2-flex  # [win]
+    - r-base
 
   host:
     - coda
@@ -38,7 +39,6 @@ requirements:
     - hdf4
     - hdf5
     - jpeg
-    - r-base
 
   run:
     - coda
