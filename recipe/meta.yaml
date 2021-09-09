@@ -14,7 +14,7 @@ source:
     - hdf5getinfo.patch
 
 build:
-  number: 2
+  number: 3
   script_env:
     - SDKROOT  # [osx]
   rpaths:
