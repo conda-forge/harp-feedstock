@@ -7,11 +7,6 @@ package:
 source:
   url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
   sha256: d8518a107110b0079ab067208b809990ba7d8ed4c68f6950aa0d94f09338dfc2
-  patches:
-    - findjpeg.patch
-    - findr.patch
-    - rmodule.patch
-    - hdf5getinfo.patch
 
 build:
   number: 0
