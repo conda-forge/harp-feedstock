@@ -20,11 +20,23 @@ jobs:
       osx_64_python3.7.____cpythonr_base4.1:
         CONFIG: osx_64_python3.7.____cpythonr_base4.1
         UPLOAD_PACKAGES: 'True'
+      osx_64_python3.8.____73_pypyr_base4.0:
+        CONFIG: osx_64_python3.8.____73_pypyr_base4.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_python3.8.____73_pypyr_base4.1:
+        CONFIG: osx_64_python3.8.____73_pypyr_base4.1
+        UPLOAD_PACKAGES: 'True'
       osx_64_python3.8.____cpythonr_base4.0:
         CONFIG: osx_64_python3.8.____cpythonr_base4.0
         UPLOAD_PACKAGES: 'True'
       osx_64_python3.8.____cpythonr_base4.1:
         CONFIG: osx_64_python3.8.____cpythonr_base4.1
+        UPLOAD_PACKAGES: 'True'
+      osx_64_python3.9.____73_pypyr_base4.0:
+        CONFIG: osx_64_python3.9.____73_pypyr_base4.0
+        UPLOAD_PACKAGES: 'True'
+      osx_64_python3.9.____73_pypyr_base4.1:
+        CONFIG: osx_64_python3.9.____73_pypyr_base4.1
         UPLOAD_PACKAGES: 'True'
       osx_64_python3.9.____cpythonr_base4.0:
         CONFIG: osx_64_python3.9.____cpythonr_base4.0
