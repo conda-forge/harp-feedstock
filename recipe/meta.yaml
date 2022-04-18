@@ -37,11 +37,11 @@ requirements:
     - r-base
 
   run:
-    - r-base
-    - coda
     - python
+    - r-base
+    - cffi  # [python_impl != 'pypy']
+    - coda
     - numpy
-    - cffi
 
 test:
   commands:
