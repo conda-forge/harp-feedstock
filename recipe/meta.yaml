@@ -9,7 +9,7 @@ source:
   sha256: 26048cf7a0cbadaa1dbbbb380f1e1f645f71800293e5c35c5aa9905d540a6a59
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SDKROOT  # [osx]
   rpaths:
@@ -37,11 +37,11 @@ requirements:
     - r-base
 
   run:
-    - r-base
-    - coda
     - python
+    - r-base
+    - cffi  # [python_impl != 'pypy']
+    - coda
     - numpy
-    - cffi
 
 test:
   commands:
