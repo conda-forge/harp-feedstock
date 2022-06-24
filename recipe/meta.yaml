@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
   sha256: e14ed63c9664e62c81f93df40e2b80a2a2e65dfaef36023f5dc3744cf39eaa0a
+  patches:
+    - asscalar.patch
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SDKROOT  # [osx]
   rpaths:
