@@ -40,11 +40,11 @@ requirements:
     - hdf4
     - hdf5
     - jpeg
-    - r-base [not arm64]
+    - r-base  # [not arm64]
 
   run:
     - python
-    - r-base [not arm64]
+    - r-base  # [not arm64]
     - cffi  # [python_impl != 'pypy']
     - coda
     - numpy
