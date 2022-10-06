@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '13'
+- '14'
 hdf4:
 - 4.2.15
 hdf5:
@@ -21,24 +21,18 @@ jpeg:
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
-  hdf4:
-    max_pin: x.x
-  jpeg:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
   r-base:
     min_pin: x.x
     max_pin: x.x
-  zlib:
-    max_pin: x.x
 python:
 - 3.9.* *_cpython
 python_impl:
 - cpython
 r_base:
-- '4.0'
+- '4.2'
 target_platform:
 - osx-64
 zip_keys:
