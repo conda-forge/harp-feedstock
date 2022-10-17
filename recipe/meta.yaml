@@ -11,7 +11,7 @@ source:
     - asscalar.patch
 
 build:
-  number: 2
+  number: 3
   script_env:
     - SDKROOT  # [osx]
     - HARP_BUILD_R=True  # [not arm64]
