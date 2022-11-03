@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
   sha256: 81436b9e868865e701cfee86d2238d22a8e6fd116b649c70e45560fba47a8280
-  patches:
-    - asscalar.patch
 
 build:
   number: 0
