@@ -9,7 +9,7 @@ source:
   sha256: a94fb1c1bb660cbb8735abe548e821b2b55c9429cb57537a7fd186fbb86ac5c4
 
 build:
-  number: 0
+  number: 1
   script_env:
     - SDKROOT  # [osx]
     - HARP_BUILD_R=True  # [not arm64]
@@ -27,37 +27,84 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make  # [not win]
-    - bison  # [not win]
-    - flex  # [not win]
-    - m2-bison  # [win]
-    - m2-flex  # [win]
 
-  host:
-    - coda
-    - python
-    - zlib
-    - hdf4
-    - hdf5
-    - jpeg
-    - r-base  # [not arm64]
+outputs:
+  - name: harp
+    script: install.sh  # [unix]
+    script: install.bat  # [win]
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - cross-r-base {{ r_base }}  # [build_platform != target_platform and not arm64]
+        - gnuconfig  # [unix]
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - make  # [not win]
+        - bison  # [not win]
+        - flex  # [not win]
+        - m2-bison  # [win]
+        - m2-flex  # [win]
 
-  run:
-    - python
-    - r-base  # [not arm64]
-    - cffi  # [python_impl != 'pypy']
-    - coda
-    - numpy
+      host:
+        - coda
+        - python
+        - zlib
+        - hdf4
+        - hdf5
+        - jpeg
+        - r-base  # [not arm64]
 
-test:
-  commands:
-    - test -f $PREFIX/lib/libharp$SHLIB_EXT  # [unix]
-    - if not exist "%LIBRARY_PREFIX%/lib/libharp.lib" exit 1  # [win]
-    - if not exist "%LIBRARY_PREFIX%/bin/harpdump.exe" exit 1  # [win]
-    - $R -e "library('harp')"  # [unix]
-    - "\"%R%\" -e \"library('harp')\""  # [win]
-  imports:
-    - harp
+      run:
+        - python
+        - cffi  # [python_impl != 'pypy']
+        - coda
+        - numpy
+
+    test:
+      commands:
+        - test -f $PREFIX/lib/libharp$SHLIB_EXT  # [unix]
+        - if not exist "%LIBRARY_PREFIX%/lib/libharp.lib" exit 1  # [win]
+        - if not exist "%LIBRARY_PREFIX%/bin/harpdump.exe" exit 1  # [win]
+      imports:
+        - harp
+
+  - name: r-harp
+    script: install.sh  # [unix]
+    script: install.bat  # [win]
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - cross-r-base {{ r_base }}  # [build_platform != target_platform and not arm64]
+        - gnuconfig  # [unix]
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake
+        - make  # [not win]
+        - bison  # [not win]
+        - flex  # [not win]
+        - m2-bison  # [win]
+        - m2-flex  # [win]
+
+      host:
+        - coda
+        - python
+        - zlib
+        - hdf4
+        - hdf5
+        - jpeg
+        - r-base  # [not arm64]
+
+      run:
+        - harp
+        - r-base  # [not arm64]
+
+    test:
+      commands:
+        - $R -e "library('harp')"  # [unix]
+        - "\"%R%\" -e \"library('harp')\""  # [win]
 
 about:
   home: https://github.com/stcorp/harp

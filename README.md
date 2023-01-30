@@ -289,16 +289,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `harp` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `harp, r-harp` can be installed with `conda`:
 
 ```
-conda install harp
+conda install harp r-harp
 ```
 
 or with `mamba`:
 
 ```
-mamba install harp
+mamba install harp r-harp
 ```
 
 It is possible to list all of the versions of `harp` available on your platform with `conda`:

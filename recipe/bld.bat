@@ -11,5 +11,5 @@ cmake ^
   -DCMAKE_INSTALL_PREFIX:PATH=%PREFIX%
 if errorlevel 1 exit 1
 
-cmake --build . --target install --config Release
+cmake --build . --config Release
 if errorlevel 1 exit 1
