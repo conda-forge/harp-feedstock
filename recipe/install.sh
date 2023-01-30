@@ -3,7 +3,6 @@ set -e
 set -x
 
 cd build
-make install
 
 if [[ "${PKG_NAME}" == "harp" ]]; then
     cmake --install . --component core
