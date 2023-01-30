@@ -23,4 +23,3 @@ cmake $CMAKE_ARGS --trace \
   ..
 
 make -j$CPU_COUNT
-#make install
