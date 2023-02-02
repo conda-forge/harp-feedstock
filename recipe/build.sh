@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+set -x
 
 mkdir build
 cd build
@@ -7,7 +9,6 @@ cmake $CMAKE_ARGS --trace \
   -DCMAKE_BUILD_TYPE="Release" \
   -DCMAKE_INSTALL_PREFIX="$PREFIX" \
   -DCMAKE_PREFIX_PATH="$PREFIX" \
-  -DCMAKE_OSX_SYSROOT=${SDKROOT} \
   -DHARP_BUILD_PYTHON=True \
   -DHARP_BUILD_R=$HARP_BUILD_R \
   -DCODA_INCLUDE_DIR="$PREFIX/include" \
@@ -21,4 +22,3 @@ cmake $CMAKE_ARGS --trace \
   ..
 
 make -j$CPU_COUNT
-make install
