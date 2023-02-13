@@ -53,7 +53,7 @@ outputs:
         - hdf4
         - hdf5
         - jpeg
-        - r-base  # [not arm64]
+        - r-base >=4.2  # [not arm64]
 
       run:
         - python
@@ -94,11 +94,11 @@ outputs:
         - hdf4
         - hdf5
         - jpeg
-        - r-base  # [not arm64]
+        - r-base >=4.2  # [not arm64]
 
       run:
         - harp
-        - r-base  # [not arm64]
+        - r-base >=4.2  # [not arm64]
 
     test:
       commands:
