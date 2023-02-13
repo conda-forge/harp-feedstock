@@ -21,20 +21,15 @@ hdf5:
 jpeg:
 - '9'
 numpy:
-- '1.20'
+- '1.21'
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  r-base:
-    min_pin: x.x
-    max_pin: x.x
 python:
-- 3.8.* *_cpython
+- 3.10.* *_cpython
 python_impl:
 - cpython
-r_base:
-- '4.1'
 target_platform:
 - linux-64
 zip_keys:
