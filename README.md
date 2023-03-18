@@ -1,11 +1,11 @@
-About harp
-==========
+About harp-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/harp-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/stcorp/harp
 
 Package license: BSD-3-Clause-Clear
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/harp-feedstock/blob/main/LICENSE.txt)
 
 Summary: HARP is a toolset for ingesting, processing and inter-comparing satellite or model data against correlative data. The toolset is composed of a set of command line tools, a C library of analysis functions, and import/export interfaces for Python, R, Matlab, and IDL.
 
