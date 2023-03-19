@@ -1,5 +1,4 @@
 cmake ^
-  -G"Visual Studio 14 2015 Win64" ^
   -DCMAKE_BUILD_TYPE=Release ^
   -DHARP_ENABLE_CONDA_INSTALL=True ^
   -DHARP_BUILD_PYTHON=True ^
