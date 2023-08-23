@@ -15,13 +15,13 @@ cxx_compiler_version:
 hdf4:
 - 4.2.15
 hdf5:
-- 1.14.1
+- 1.14.2
 libjpeg_turbo:
 - 2.1.5
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.21'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
