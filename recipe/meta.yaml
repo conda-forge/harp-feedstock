@@ -21,7 +21,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cross-r-base                           # [build_platform != target_platform and not arm64]
+    - cross-r-base                           # [build_platform != target_platform]
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -35,7 +35,7 @@ outputs:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - cross-r-base                           # [build_platform != target_platform and not arm64]
+        - cross-r-base                           # [build_platform != target_platform]
         - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -54,7 +54,7 @@ outputs:
         - hdf5
         - libjpeg-turbo
         - r-base  # [win]
-        - r-base >=4.2  # [not arm64 and not win]
+        - r-base >=4.2  # [not win]
 
       run:
         - python
@@ -77,7 +77,7 @@ outputs:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - cross-r-base                           # [build_platform != target_platform and not arm64]
+        - cross-r-base                           # [build_platform != target_platform]
         - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -96,12 +96,12 @@ outputs:
         - hdf5
         - libjpeg-turbo
         - r-base  # [win]
-        - r-base >=4.2  # [not arm64 and not win]
+        - r-base >=4.2  # [not win]
 
       run:
         - harp
         - r-base  # [win]
-        - r-base >=4.2  # [not arm64 and not win]
+        - r-base >=4.2  # [not win]
 
     test:
       commands:
