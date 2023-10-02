@@ -21,7 +21,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cross-r-base {{ r_base }}  # [build_platform != target_platform and not arm64]
+    - cross-r-base                           # [build_platform != target_platform and not arm64]
     - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -35,7 +35,7 @@ outputs:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - cross-r-base {{ r_base }}  # [build_platform != target_platform and not arm64]
+        - cross-r-base                           # [build_platform != target_platform and not arm64]
         - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
@@ -77,7 +77,7 @@ outputs:
       build:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - cross-r-base {{ r_base }}  # [build_platform != target_platform and not arm64]
+        - cross-r-base                           # [build_platform != target_platform and not arm64]
         - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
