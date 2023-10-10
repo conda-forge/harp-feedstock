@@ -10,9 +10,6 @@ source:
 
 build:
   number: 1
-  script_env:
-    - HARP_BUILD_R=True  # [not arm64]
-    - HARP_BUILD_R=False  # [arm64]
   rpaths:
     - lib/R/lib
     - lib
