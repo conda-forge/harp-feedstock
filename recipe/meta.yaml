@@ -14,16 +14,6 @@ build:
     - lib/R/lib
     - lib
 
-requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cross-r-base                           # [build_platform != target_platform]
-    - gnuconfig  # [unix]
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - cmake
-
 outputs:
   - name: harp
     script: install.sh  # [unix]
@@ -33,7 +23,6 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - cross-r-base                           # [build_platform != target_platform]
-        - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
@@ -75,7 +64,6 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - cross-r-base                           # [build_platform != target_platform]
-        - gnuconfig  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - cmake
