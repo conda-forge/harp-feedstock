@@ -11,9 +11,9 @@ hdf4:
 hdf5:
 - 1.14.2
 libjpeg_turbo:
-- 2.1.5
+- '3'
 numpy:
-- '1.22'
+- '1.23'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -22,9 +22,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.9.* *_73_pypy
+- 3.11.* *_cpython
 python_impl:
-- pypy
+- cpython
 r_base:
 - '4.1'
 target_platform:
