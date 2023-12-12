@@ -45,10 +45,8 @@ outputs:
       host:
         - coda
         - python
-        - zlib
         - hdf4
         - hdf5
-        - libjpeg-turbo
         - r-base  # [win]
         - r-base >=4.2  # [not win and not arm64]
 
@@ -85,10 +83,8 @@ outputs:
       host:
         - coda
         - python
-        - zlib
         - hdf4
         - hdf5
-        - libjpeg-turbo
         - r-base  # [win]
         - r-base >=4.2  # [not win and not arm64]
 
