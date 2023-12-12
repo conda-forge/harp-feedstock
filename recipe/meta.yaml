@@ -9,7 +9,7 @@ source:
   sha256: 017beff923a0b0bcfadf99f04a046df40ceba58a82a3d9d55942f500cdc6a645
 
 build:
-  number: 0
+  number: 1
   script_env:
     - HARP_BUILD_R=True  # [not arm64]
     - HARP_BUILD_R=False  # [arm64]
@@ -45,10 +45,8 @@ outputs:
       host:
         - coda
         - python
-        - zlib
         - hdf4
         - hdf5
-        - libjpeg-turbo
         - r-base  # [win]
         - r-base >=4.2  # [not win and not arm64]
 
@@ -85,10 +83,8 @@ outputs:
       host:
         - coda
         - python
-        - zlib
         - hdf4
         - hdf5
-        - libjpeg-turbo
         - r-base  # [win]
         - r-base >=4.2  # [not win and not arm64]
 
