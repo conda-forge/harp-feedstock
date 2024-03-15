@@ -1,4 +1,4 @@
-{% set version = "1.20.2" %}
+{% set version = "1.21" %}
 
 package:
   name: harp
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
-  sha256: 017beff923a0b0bcfadf99f04a046df40ceba58a82a3d9d55942f500cdc6a645
+  sha256: a6e51a33f7f477304252d0f45c217bd075c4c6a69cf66b81f37b25520caff3b6
 
 build:
-  number: 1
+  number: 0
   script_env:
     - HARP_BUILD_R=True  # [not arm64]
     - HARP_BUILD_R=False  # [arm64]
