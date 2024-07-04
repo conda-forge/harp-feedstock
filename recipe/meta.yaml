@@ -9,7 +9,7 @@ source:
   sha256: 10b857d88451a43e29fa776eba1cab6fe3a9b4a5c9a0452496b2928392ddcdc7
 
 build:
-  number: 0
+  number: 1
   script_env:
     - HARP_BUILD_R=True  # [not arm64]
     - HARP_BUILD_R=False  # [arm64]
