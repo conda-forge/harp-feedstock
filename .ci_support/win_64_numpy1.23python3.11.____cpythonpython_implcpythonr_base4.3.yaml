@@ -13,7 +13,7 @@ hdf4:
 hdf5:
 - 1.14.3
 numpy:
-- '1.22'
+- '1.23'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -22,11 +22,11 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.9.* *_cpython
+- 3.11.* *_cpython
 python_impl:
 - cpython
 r_base:
-- '4.1'
+- '4.3'
 target_platform:
 - win-64
 zip_keys:
