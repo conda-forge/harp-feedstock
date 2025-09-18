@@ -10,9 +10,6 @@ source:
 
 build:
   number: 2
-  script_env:
-    - HARP_BUILD_R=True  # [not arm64]
-    - HARP_BUILD_R=False  # [arm64]
   rpaths:
     - lib/R/lib
     - lib
@@ -49,8 +46,6 @@ outputs:
         - python
         - hdf4
         - hdf5
-        - r-base  # [win]
-        - r-base >=4.2  # [not win and not arm64]
 
       run:
         - python
@@ -67,8 +62,8 @@ outputs:
         - harp
 
   - name: r-harp
-    script: install.sh  # [unix]
-    script: install.bat  # [win]
+    script: install_r.sh  # [unix]
+    script: install_r.bat  # [win]
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
@@ -88,17 +83,15 @@ outputs:
         - python
         - hdf4
         - hdf5
-        - r-base  # [win]
-        - r-base >=4.2  # [not win and not arm64]
+        - r-base >=4.2
 
       run:
         - harp
-        - r-base  # [win]
-        - r-base >=4.2  # [not win and not arm64]
+        - r-base >=4.2
 
     test:
       commands:
-        - $R -e "library('harp')"  # [unix and not arm64]
+        - $R -e "library('harp')"  # [unix]
         - "\"%R%\" -e \"library('harp')\""  # [win]
 
 about:
