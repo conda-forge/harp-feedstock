@@ -68,7 +68,7 @@ outputs:
     script: install_r.sh  # [unix]
     script: install_r.bat  # [win]
     build:
-      skip: True  # [arm64]
+      skip: True  # [arm64 or win]
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
