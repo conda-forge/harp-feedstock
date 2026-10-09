@@ -2,7 +2,7 @@
 
 package:
   name: harp
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/stcorp/harp/releases/download/{{ version }}/harp-{{ version }}.tar.gz
